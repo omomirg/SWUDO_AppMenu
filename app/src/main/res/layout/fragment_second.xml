@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <id>
+ 캘린더 뷰 : calendarView
+ 날짜를 선택해주세요 : caltext
+ 각 습관 : stext1, 2, 3
+ 버튼 : 물 (button1,2,3), 산책(4,5,6), 운동(7,8,9)-->
+
+<!-- 스크롤  -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".SecondFragment">
+
+    <!-- 전체 레이아웃을 수직으로 만들어주기 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- 캘린더 뷰 / style은 theme에 선언 캘린더 날짜가 흰색으로 보이도록 -->
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="370dp"
+            android:background="@drawable/background_calendar"
+            app:mcv_calendarMode="month"
+            app:mcv_showOtherDates="all"
+            android:dateTextAppearance="@style/CalendarDateTextAppearance" />
+
+
+        <!-- 텍스트 뷰 / background는 회색 + 모퉁이를 둥글게 하기 위해 drawabel에 만든 뒤 사용함 -->
+        <!-- 날짜 선택 linear layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/caltext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/pretendard"
+                android:text="날짜를 선택 해주세요"
+                android:textColor="@color/green"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/pretendard"
+                android:text="슈니님, 오늘도 건강한 하루를 시작해요!"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- 물 세잔 마시기 layout / 각 습관 별로 layout 1개 씩 텍스트뷰, 버튼 구성-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/background_todo"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/stext1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/pretendard"
+                android:text="물 세 잔 마시기"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/pretendard"
+                android:text="건강의 기본은 수분 섭취!"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <android.widget.Button
+                        android:id="@+id/button1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@drawable/button_selector" />
+
+                    <android.widget.Button
+                        android:id="@+id/button2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@drawable/button_selector" />
+
+                    <android.widget.Button
+                        android:id="@+id/button3"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/button_selector" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 산책 layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/background_todo"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/stext2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/pretendard"
+                android:text="산책 30분 하기"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/pretendard"
+                android:text="바깥 공기를 마시며 쉬어가요!"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <android.widget.Button
+                        android:id="@+id/button4"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@drawable/button_selector" />
+
+                    <android.widget.Button
+                        android:id="@+id/button5"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@drawable/button_selector" />
+
+                    <android.widget.Button
+                        android:id="@+id/button6"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/button_selector" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 운동 layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/background_todo"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/stext3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/pretendard"
+                android:text="근력운동 1세트 하기"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/pretendard"
+                android:text="건강한 신체를 위해서는 운동이 필수!"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <android.widget.Button
+                        android:id="@+id/button7"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@drawable/button_selector" />
+
+                    <android.widget.Button
+                        android:id="@+id/button8"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@drawable/button_selector" />
+
+                    <android.widget.Button
+                        android:id="@+id/button9"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/button_selector" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!-- 스크롤을 위해 여백 도 layout으로 채워주기 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp">
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

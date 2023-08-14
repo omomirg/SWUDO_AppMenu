@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/homegray"
+        android:enabled="true" />
+    <item
+        android:id="@+id/todo"
+        android:title="To-do"
+        android:icon="@drawable/checkgray"
+        android:enabled="true" />
+</menu>

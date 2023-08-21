@@ -1,10 +1,10 @@
-# SWUDO_AppMenu
+## SWUDO_AppMenu
 menu : todo, check
 
 
 
 
-##### 서울여자대학교 guru2 project
+#### 서울여자대학교 guru2 project
 
 
 
@@ -17,6 +17,8 @@ menu : todo, check
 
 
 ✅ 소스 코드 :
+
+
 https://github.com/JuHuiHeo/SWUDO_APP
 
 

@@ -2,7 +2,7 @@
 menu : todo, check
 
 
-#### 서울여자대학교 Guru2 project
+### 서울여자대학교 Guru2 
 
 
 ###### 시연 영상 : 

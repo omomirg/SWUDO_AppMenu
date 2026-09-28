@@ -12,6 +12,9 @@
 - **할 일:** 캘린더에서 날짜를 고르고 할 일을 체크하면 완료 개수 갱신 (LiveData, ViewModel)
 - **하단 메뉴:** home과 todo 탭 전환 (Fragment 교체)
 
+## 한계
+전체 통합 x
+
 ## 링크
 - 시연 영상: https://youtu.be/stOLM85Cx9w
 - 로그인, 회원가입 (팀원 구현): https://github.com/JuHuiHeo/SWUDO_APP

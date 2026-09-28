@@ -1,19 +1,20 @@
-## SWUDO_AppMenu
-menu : todo, check
+# SWUDO: 건강 습관 할 일 관리 앱 (메뉴 화면)
 
+서울여자대학교 Guru2 팀 프로젝트 (2023) | Kotlin, Android
 
-### 서울여자대학교 Guru2 
+물 마시기, 산책, 근력운동 같은 건강 습관을 매일 체크하는 안드로이드 앱입니다.
+이 저장소는 제가 맡아 구현한 메뉴 화면(홈, 할 일, 하단 메뉴) 부분입니다.
 
+**담당:** 메뉴 화면 전체 구현 (홈, 할 일 체크, 캘린더, 하단 메뉴)
 
-###### 시연 영상 : 
+## 주요 기능
+- **홈:** 오늘의 할 일과 진행도(0/3) 표시
+- **할 일:** 캘린더에서 날짜를 고르고 할 일을 체크하면 완료 개수 갱신 (LiveData, ViewModel)
+- **하단 메뉴:** home과 todo 탭 전환 (Fragment 교체)
 
-https://youtu.be/stOLM85Cx9w
+## 한계
+로그인, 회원가입(Firebase)은 팀원이 별도 프로젝트로 구현했고, 기간 안에 두 프로젝트를 하나의 앱으로 통합하지 못했습니다.
 
-
-###### 소스 코드 :
-
-
-https://github.com/JuHuiHeo/SWUDO_APP
-
-
-https://github.com/JuHuiHeo/SWUDO_APP_MENU
+## 링크
+- 시연 영상: https://youtu.be/stOLM85Cx9w
+- 로그인, 회원가입 (팀원 구현): https://github.com/JuHuiHeo/SWUDO_APP
